@@ -2,11 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for
 import os
 import random
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-UPLOAD_FOLDER = os.path.join(BASE_DIR, 'static')
+
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'app/static'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(BASE_DIR, 'static')
 ALLOWED_EXTENSIONS = {'jpeg', 'jpg', 'png'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
