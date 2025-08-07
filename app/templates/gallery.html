@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Gallery</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <meta http-equiv="refresh" content="5">
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Gallery
-      </h1>
-      <p class="subtitle">
-        Hochzeit im <strong>Gruenen</strong>!
-      </p>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <img src="{{url_for('static', filename=img_to_show) }}" alt="img not found">
-    </div>
-  </section>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Gallery Mode</h1>
+        {% if images %}
+          <figure class="image">
+            <img src="{{ url_for('static', filename=images[0]) }}">
+          </figure>
+        {% else %}
+          <p>No images found.</p>
+        {% endif %}
+      </div>
+    </section>
   </body>
-  <script>
-  </script>
 </html>
