@@ -27,6 +27,22 @@
           font-size: 2rem;
           padding: 2rem;
         }
+        #mobile-file-upload {
+      font-size: 1.2rem; /* scale up text inside the file selector */
+      padding: 1rem;
+    }
+
+    #mobile-file-upload .file-cta {
+      padding: 1.25rem 1rem;
+    }
+
+    #mobile-file-upload .file-label {
+      font-size: 1.2rem;
+    }
+
+    #mobile-file-upload .file-input {
+      height: 3.5rem;
+    }
   }
   </style>
   <body>
@@ -37,7 +53,7 @@
         <form method="POST" enctype="multipart/form-data is-fullwidth">
             <div class="columns is-mobile is-multiline">
               <div class="column is-fullwidth">
-                <div class="file has-name is-fullwidth">
+                <div class="file has-name is-fullwidth" id="mobile-file-upload">
                   <label class="file-label is-fullwidth">
                     <input class="file-input is-fullwidth" type="file" name="file">
                     <span class="file-cta">
