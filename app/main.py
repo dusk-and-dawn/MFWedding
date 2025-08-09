@@ -28,8 +28,12 @@ def upload():
         if file and allowed_file(file.filename):
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
             file.save(filepath)
-            return redirect(url_for('gallery'))
+            return redirect(url_for('success'))
     return render_template('upload.html')
+
+@app.route('/success')
+def success():
+    return render_template('success.html')
 
 @app.route('/gallery')
 def gallery():
